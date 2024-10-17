@@ -1,76 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fitness</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
+      <a href="#home" class="logo">FitZen <span>Hub</span></a>
 
-        <a href="#home" class="logo">FitZen <span>Hub</span></a>
+      <div class="fa-solid fa-bars" id="menu-icon"></div>
 
-        <div class="fa-solid fa-bars" id="menu-icon"></div>
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#Reviews">Reviews</a></li>
+        <li><a href="#contactUs">Contact Us</a></li>
+      </ul>
 
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#Reviews">Reviews</a></li>
-            <li><a href="#contactUs">Contact Us</a></li>
-        </ul>
-
-        <div class="top-btn">
-            <a href="login.html" class="nav-btn">Join Us</a>
-        </div>
+      <div class="top-btn">
+        <a href="login.html" class="nav-btn">Join Us</a>
+      </div>
     </header>
 
     <section class="home" id="home">
-        <div class="home-content">
+      <div class="home-content">
+        <h3>Build Your</h3>
+        <h1>Dream Physics</h1>
+        <h3><span class="multiple-text role">Bodybuilding</span></h3>
 
-            <h3>Build Your</h3>
-            <h1>Dream Physics</h1>
-            <h3><span class="multiple-text role">Bodybuilding</span></h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. incidunt.
+        </p>
 
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. incidunt.</p>
-
-            <a href="login.html" class="btn">Join Us</a>
-
-        </div>
-        <div class="home-img">
-            <img src="./Images/background-img.png" alt="">
-        </div>
-
+        <a href="login.html" class="btn">Join Us</a>
+      </div>
+      <div class="home-img">
+        <img src="./Images/background-img.png" alt="" />
+      </div>
     </section>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        var typeData = new Typed(".role", {
-            strings: [
-                "Bodybuilding",
-                "Weightlifting",
-                " Physical Fitness",
-                "Yoga",
-
-            ],
-            loop: true,
-            typeSpeed: 100,
-            backSpeed: 80,
-            backDelay: 1000,
-        });
+      var typeData = new Typed(".role", {
+        strings: ["Bodybuilding", "Weightlifting", " Physical Fitness", "Yoga"],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 80,
+        backDelay: 1000,
+      });
     </script>
-</body>
-
+  </body>
 </html>
