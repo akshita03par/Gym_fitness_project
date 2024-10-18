@@ -250,9 +250,10 @@ span {
    border: 2px solid var(--main-color);
 }
 
-/* .heading{
+.about-content .heading{
   text-align: center;
-} */
+  font-size: 5.8rem;
+}
 
 .about-content{
   padding: 0 3rem;
@@ -263,3 +264,9 @@ span {
   text-align: left;
   line-height: 1.2;
 }
+
+.about-content p{
+  font-size: 1.6rem;
+  margin: 2rem 0 2rem ;
+}
+
