@@ -21,13 +21,15 @@
 
 html {
   font-size: 62.5%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+
+   /* Home-section-code */
 
 section {
   min-width: 100vh;
@@ -144,7 +146,7 @@ span {
 .home-img::before {
   content: "FITNESS";
   position: absolute;
-  bottom: 5%;
+  bottom: 17%;
   right: 10%;
   transform: translateX(50%, 0);
   font-size: 18rem;
@@ -177,4 +179,34 @@ span {
 .btn:hover {
   color: var(--text-color);
   box-shadow: 0 0 1.6rem var(--main-color);
+}
+
+   /* Services-section-code */
+
+.services {
+  background: var(--snd-bg-color);
+}
+
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(350px,auto));
+  align-items: center;
+  gap: 2.3rem;
+  margin-top: 4.1rem;
+}
+
+.row{
+  background: var(--bg-color);
+  border-radius: 27px;
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px var(--main-color);
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+
+.row img{
+  height: auto;
+  width: 100%;
+  border-radius:27px ;
+  margin-bottom: 1.4rem;
 }
