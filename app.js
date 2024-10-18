@@ -25,11 +25,27 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const username = document.querySelector("input[type='text']").value;
-    const password = document.querySelector("input[type='password']").value;
+    const signInUsername = document.querySelector(
+      ".sign-in-form input[type='text']"
+    ).value;
+
+    const signInPassword = document.querySelector(
+      ".sign-in-form input[type='password']"
+    ).value;
+
+    const signUpUsername = document.querySelector(
+      ".sign-up-form input[type='text']"
+    ).value;
+
+    const signUpEmail = document.querySelector(
+      ".sign-up-form input[type='email']"
+    ).value;
+    const signUpPassword = document.querySelector(
+      ".sign-up-form input[type='password']"
+    ).value;
 
     if (username === "user" && password === "pass") {
-      window.location.href = "index.html";
+      window.location.href = "Index.html";
     } else {
       alert("Invalid credentials!");
     }
