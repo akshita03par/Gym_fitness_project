@@ -18,6 +18,7 @@
   --snd-bg-color: #111;
   --text-color: #fff;
   --main-color: #f48c06;
+  --login-color: #dc2f02;
 }
 
 html {
@@ -184,10 +185,24 @@ span {
 
 /* body mass index */
 
+
 .bmi {
   text-align: center;
-  padding: 50px 20px;
-  background: var(--snd-bg-color);
+  padding: 80px 20px;
+  background: #151515;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+}
+
+.bmi-content {
+  padding: 4rem;
+  margin: 3rem auto; 
+  max-width: 600px;
+  border: 2px solid var(--bg-color);
+  border-radius: 25px;
+  background-color: var(--login-color);
+  background: linear-gradient(-45deg, var(--main-color), #9d0208);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .bmi .input-group {
@@ -195,35 +210,82 @@ span {
 }
 
 .bmi .input-group label {
-  font-size: 18px;
-  margin-right: 10px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-color);
 }
 
 .bmi .input-group input {
-  padding: 10px;
-  width: 250px;
-  border: 1px solid var(--main-color);
-  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid var(--main-color);
+  border-radius: 20px;
+  font-size: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.bmi .input-group input:focus {
+  border-color: var(--login-color);
+  outline: none;
 }
 
 .bmi .btn {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #4caf50;
   color: #fff;
+  font-size: 1.4rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 15px;
+  transition: 1s ease-in-out;
 }
 
 .bmi .btn:hover {
-  background-color: #45a049;
+  background-color: #336f36;
+  transform: translateY(-3px);
 }
 
 .result {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
 }
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus::placeholder {
+  color: #555;
+}
+
+.instructions {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  color: #555;
+  text-align: left;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instructions h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.instructions p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
 
 
    /* Services-section-code */
