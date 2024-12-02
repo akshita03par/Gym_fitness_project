@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -43,7 +44,7 @@
     </header>
 
     <section class="home" id="home">
-      <div class="home-content">
+      <div class="home-content" data-aos="zoom-in">
         <h3>Build Your</h3>
         <h1>Dream Physics</h1>
         <h3><span class="multiple-text role">Bodybuilding</span></h3>
@@ -55,7 +56,7 @@
 
         <a href="login.html" class="btn">Join Us</a>
       </div>
-      <div class="home-img">
+      <div class="home-img" data-aos="zoom-in">
         <img src="./Images/background-img.png" alt="Fitness background image" />
       </div>
     </section>
@@ -63,9 +64,9 @@
     <!-- services-section-page -->
 
     <section class="services" id="services">
-      <h2 class="heading">Our <span>Services</span></h2>
+      <h2 class="heading" data-aos="zoom-in-down">Our <span>Services</span></h2>
 
-      <div class="services-content">
+      <div class="services-content" data-aos="zoom-in-up">
         <div class="row">
           <img src="./Images/Physical-fitness-1.jpg" alt="" />
 
@@ -107,11 +108,11 @@
     <!-- About-section-page -->
 
     <section class="about" id="about">
-      <div class="about-img">
+      <div class="about-img" data-aos="zoom-in-down">
         <img src="./Images/about.jpeg" alt="" />
       </div>
 
-      <div class="about-content">
+      <div class="about-content" data-aos="zoom-in-down">
         <h2 class="heading">Why Choose Us?</h2>
 
         <p>
@@ -140,9 +141,9 @@
 
 
     <section class="plans" id="plans" id="pricing">
-      <h2 class="heading">Our <span>Plans</span></h2>
+      <h2 class="heading" data-aos="zoom-in-down">Our <span>Plans</span></h2>
 
-      <div class="plans-content">
+      <div class="plans-content" data-aos="zoom-in-up">
         <div class="box">
             <h3>BASIC</h3>
             <h2><span>$100/Month</span></h2>
@@ -197,9 +198,9 @@
 
     <section class="review" id="review" id="Reviews">
          <div class="review-box">
-            <h2 class="heading">Client <span>Reviews</span></h2>
+            <h2 class="heading" data-aos="zoom-in-down">Client <span>Reviews</span></h2>
             
-            <div class="wrapper">
+            <div class="wrapper"data-aos="zoom-in-up">
                 <div class="review-item">
                  <img src="" alt="">
                  <h2>John</h2>
@@ -261,8 +262,18 @@
     </footer>
     
 
+    <!-- animation  -->
 
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:300,
+        duration:1400,
+      });
+    </script>
+
+    <!-- typed animation -->
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script
       src="https://kit.fontawesome.com/58a810656e.js"
@@ -277,5 +288,7 @@
         backDelay: 1000,
       });
     </script>
+
+    <script src="script.js"></script>
   </body>
 </html>
