@@ -275,13 +275,14 @@ input:focus::placeholder {
 }
 
 .instructions h3 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 10px;
   color: var(--main-color);
 }
 
 .instructions p {
-  font-size: 1.2rem;
+  font-size: 2rem;
   line-height: 1.6;
   color: #333;
 }
@@ -335,6 +336,12 @@ input:focus::placeholder {
   transform: translate(-5px) scale(1.04);
   cursor:pointer;
 }
+
+.row p{
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
 
     /* About-section-code */
 
@@ -397,7 +404,7 @@ input:focus::placeholder {
   background: var(--bg-color);
   border-radius: 28px;
   border: 1px solid transparent;
-  box-shadow: 0 0 5px var (--main-color);
+  box-shadow: 0 0 5px var(--main-color);
   transition: all 0.5s ease;
   cursor: pointer;
 }
@@ -406,6 +413,11 @@ input:focus::placeholder {
   font-size: 35px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.box p{
+  padding: 10px;
+  font-size: 1.5rem;
 }
 
 .box h2 {
@@ -427,7 +439,7 @@ input:focus::placeholder {
   font-weight: 700;
   padding: 7px 0;
   color: var(--text-color);
-  border-bottom: 2px solid ;
+  border-bottom: 2px solid var(--main-color) ;
   transition: all 0.5s ease;
 }
 
@@ -439,7 +451,7 @@ input:focus::placeholder {
 }
 
 .box a:hover{
-  border-bottom:  2px solid var(--main-color);
+  border-bottom:  2px solid var(--login-colorr);
 }
 
 .box:hover {
@@ -467,7 +479,7 @@ input:focus::placeholder {
 }
 
 .review-box img {
-  width: 15rem;
+  width: 16rem;
   border-radius: 50%;
   border: 3px solid var(--main-color) ;
 }
