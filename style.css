@@ -182,6 +182,50 @@ span {
   box-shadow: 0 0 1.6rem var(--main-color);
 }
 
+/* body mass index */
+
+.bmi {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--snd-bg-color);
+}
+
+.bmi .input-group {
+  margin: 15px 0;
+}
+
+.bmi .input-group label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.bmi .input-group input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+}
+
+.bmi .btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.bmi .btn:hover {
+  background-color: #45a049;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
    /* Services-section-code */
 
 .services {

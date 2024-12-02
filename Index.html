@@ -34,7 +34,7 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#plans">Pricing</a></li>
           <li><a href="#review">Reviews</a></li>
-          <li><a href="#contactUs">Contact Us</a></li>
+          <!-- <li><a href="#contactUs">Contact Us</a></li> -->
         </ul>
       </nav>
 
@@ -60,6 +60,37 @@
         <img src="./Images/background-img.png" alt="Fitness background image" />
       </div>
     </section>
+
+    <!-- Body Mass Index Calculator code -->
+
+
+    <section class="bmi" id="bmi">
+      <h2 class="heading" data-aos="zoom-in-down">Calculate Your <span>BMI</span></h2>
+      
+      <div class="bmi-content" data-aos="zoom-in-up">
+        <form id="bmi-form">
+          <div class="input-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight" required />
+          </div>
+          <div class="input-group">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter your height" required />
+          </div>
+          <button type="button" class="btn" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
+    
+        <div id="bmi-result" class="result" data-aos="fade-in">
+          <h3>Your BMI: <span id="bmi-value">--</span></h3>
+          <p id="bmi-category"></p>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+
 
     <!-- services-section-page -->
 
