@@ -46,3 +46,4 @@ function calculateBMI() {
     alert('Please enter both weight and height!');
   }
 }
+

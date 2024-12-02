@@ -28,7 +28,6 @@ body {
   background-color: var(--bg-color);
 }
 
-
 .container {
   position: relative;
   width: 70vw;
@@ -77,13 +76,11 @@ form {
 form.sign-in-form {
   opacity: 1;
   transition: 0.5s ease-in-out;
-  /* transition: 1s; */
 }
 
 form.sign-up-form {
   opacity: 0;
   transition: 0.5s ease-in-out;
-  /* transition: 1s; */
 }
 
 .title {
@@ -179,7 +176,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* z-index: 5; */
 }
 
 .panel {
@@ -236,7 +232,7 @@ a {
   display: none;
 }
 
-/*Animation*/
+/* Animation */
 
 .container.sign-up-mode::before {
   transform: translateX(0);
@@ -268,7 +264,7 @@ a {
   pointer-events: all;
 }
 
-/*Responsive*/
+/* Responsive */
 
 @media (max-width: 779px) {
   .container {
@@ -290,13 +286,9 @@ a {
     display: none;
   }
 
-  .container.sign-up-mode2 form.sign-up-form {
+  .container.sign-up-mode form.sign-up-form {
     display: flex;
     opacity: 1;
-  }
-
-  .container.sign-up-mode2 form.sign-up-form {
-    display: none;
   }
 
   .panels-container {
@@ -308,4 +300,3 @@ a {
     margin-top: 30px;
   }
 }
-
