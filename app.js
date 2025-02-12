@@ -1,57 +1,36 @@
-document
-  .querySelector(".sign-in-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  // Handle Sign In Button Click (for form submission)
+  document.querySelector(".sign-in-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting
 
-    const signInUsername = document.querySelector(
-      ".sign-in-form input[type='text']"
-    ).value;
-
-    const signInPassword = document.querySelector(
-      ".sign-in-form input[type='password']"
-    ).value;
+    const signInUsername = document.querySelector(".sign-in-form input[type='text']").value;
+    const signInPassword = document.querySelector(".sign-in-form input[type='password']").value;
 
     if (signInUsername === "user" && signInPassword === "pass") {
-      window.location.href = "Index.html"; // Redirect to Index page
+      window.location.href = "Index.html"; // Redirect to Index page if credentials are correct
     } else {
-      alert("Invalid credentials!");
+      // Display an error message for invalid credentials
+      const errorMessage = document.querySelector("#error-message");
+      errorMessage.style.display = "block";
     }
   });
+  
 
-document
-  .querySelector("#sign-up-btn")
-  .addEventListener("click", () => {
-    document.querySelector(".container").classList.add("sign-up-mode");
+  // Handle Sign Up/Sign In Button Clicks for changing panels
+  document.querySelector("#sign-up-btn").addEventListener("click", () => {
+    document.querySelector(".container").classList.add("sign-up-mode"); // Show Sign Up panel
   });
 
-document
-  .querySelector("#sign-in-btn")
-  .addEventListener("click", () => {
-    document.querySelector(".container").classList.remove("sign-up-mode");
+  document.querySelector("#sign-in-btn").addEventListener("click", () => {
+    document.querySelector(".container").classList.remove("sign-up-mode"); // Show Sign In panel
   });
 
-document
-  .querySelector("#sign-up-btn2")
-  .addEventListener("click", () => {
-    document.querySelector(".container").classList.add("sign-up-mode");
+  document.querySelector("#sign-up-btn2").addEventListener("click", () => {
+    document.querySelector(".container").classList.add("sign-up-mode"); // Show Sign Up panel on another button click
   });
 
-document
-  .querySelector("#sign-in-btn2")
-  .addEventListener("click", () => {
-    document.querySelector(".container").classList.remove("sign-up-mode");
+  document.querySelector("#sign-in-btn2").addEventListener("click", () => {
+    document.querySelector(".container").classList.remove("sign-up-mode"); // Show Sign In panel on another button click
     window.location.href = "Index.html"; // Redirect to Index page after signing in
   });
-
-  document.addEventListener('DOMContentLoaded', function() { // Line 1 (Ensures the DOM is fully loaded before script runs)
-    // Handle Sign In Button Click
-    document.querySelector("#sign-in-btn2").addEventListener("click", () => {  // Line 2
-        console.log("Sign In button clicked!");  // For debugging
-        window.location.href = "Index.html";  // Line 3
-    });
-
-    // Handle Sign Up Button Click
-    document.querySelector("#sign-up-btn2").addEventListener("click", () => {  // Line 4
-        document.querySelector(".container").classList.add("sign-up-mode");  // Line 5
-    });
-});  // Line 6
+});
