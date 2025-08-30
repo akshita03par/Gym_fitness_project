@@ -41,6 +41,12 @@ section {
   padding: 10rem 8% 2rem;
 }
 
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
 /* .home-bg-img {
   position: relative;
   z-index: 1;
