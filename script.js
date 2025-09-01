@@ -14,36 +14,47 @@ menu.onscroll = () => {
 // body max index 
 
 function calculateBMI() {
-  const weight = document.getElementById('weight').value;
-  const height = document.getElementById('height').value;
+  // Get input values
+  const weight = parseFloat(document.getElementById("weight").value);
+  const height = parseFloat(document.getElementById("height").value) / 100; // cm to meters
+  const gender = document.getElementById("gender").value;
 
-  if (weight && height) {
-    const heightInMeters = height / 100;
-    const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
-
-    document.getElementById('bmi-value').textContent = bmi;
-
-    let category = '';
-    let exerciseSuggestions = '';
-    
-    if (bmi < 18.5) {
-      category = 'Underweight';
-      exerciseSuggestions = 'Focus on strength training and eat high-calorie foods. Try yoga for flexibility and core strength, like Sun Salutations and Warrior poses.';
-    } else if (bmi >= 18.5 && bmi < 24.9) {
-      category = 'Normal weight';
-      exerciseSuggestions = 'Maintain your weight with regular exercise. Incorporate cardio, strength training, and yoga for flexibility and overall health.';
-    } else if (bmi >= 25 && bmi < 29.9) {
-      category = 'Overweight';
-      exerciseSuggestions = 'Focus on cardio exercises like walking, jogging, or swimming to burn fat. Yoga poses like Downward Dog and Plank will help improve strength.';
-    } else {
-      category = 'Obesity';
-      exerciseSuggestions = 'Focus on low-impact cardio exercises such as walking or cycling to avoid joint stress. Try yoga for relaxation, like Child’s Pose and Gentle Flow.';
-    }
-
-    document.getElementById('bmi-category').textContent = `Category: ${category}`;
-    document.getElementById('exercise-suggestions').textContent = exerciseSuggestions;
-  } else {
-    alert('Please enter both weight and height!');
+  // Validate inputs
+  if (!weight || !height || !gender) {
+    alert("Please fill in all fields correctly!");
+    return;
   }
-}
 
+  // Calculate BMI
+  const bmi = weight / (height * height);
+  const bmiRounded = bmi.toFixed(1);
+
+  // Determine BMI category
+  let category = "";
+  let suggestion = "";
+
+  if (bmi < 18.5) {
+    category = "Underweight";
+    suggestion = "Focus on strength training and a calorie-rich diet.";
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
+    category = "Normal weight";
+    suggestion = "Maintain a balanced diet and regular exercise.";
+  } else if (bmi >= 25 && bmi <= 29.9) {
+    category = "Overweight";
+    suggestion = "Include cardio workouts and monitor diet.";
+  } else if (bmi >= 30 && bmi <= 34.9) {
+    category = "Obese (Class I)";
+    suggestion = "Consult a nutritionist and do moderate exercises.";
+  } else if (bmi >= 35 && bmi <= 39.9) {
+    category = "Obese (Class II)";
+    suggestion = "Focus on low-impact exercises and a strict diet plan.";
+  } else {
+    category = "Obese (Class III)";
+    suggestion = "Seek medical advice for weight management.";
+  }
+
+  // Update the result in HTML
+  document.getElementById("bmi-value").textContent = bmiRounded;
+  document.getElementById("bmi-category").textContent = category;
+  document.getElementById("exercise-suggestions").textContent = suggestion;
+}
